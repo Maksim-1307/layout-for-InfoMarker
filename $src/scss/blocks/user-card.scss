@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    position: relative;
 
     &__avatar {
         background-color: #d9d9d9;
@@ -10,14 +11,16 @@
         background-position: center center;
         display: inline-flex;
         border-radius: 100%;
-        width: 80px;
-        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
         @media screen and (max-width: 600px) {
             width: 60px;
             height: 60px;
+            min-width: 60px;
+            min-height: 60px;
         }
     }
     &__status{
@@ -58,9 +61,80 @@
         font-weight: 400;
         font-size: 13px;
         color: $second-color !important;
+        text-wrap: nowrap;
+        white-space: nowrap;
     }
     &__name{
         font-weight: 700;
         min-width: 200px;
+        display: block;
+        @media screen and (max-width: 600px) {
+            min-width: unset;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+    }
+}
+
+.user-card-opened {
+    transition: 1s;
+    $padding: 8px;
+    padding: $padding;
+    right: -$padding;
+    top: -$padding;
+    min-width: calc(100% + 2 * $padding);
+    position: absolute;
+    background-color: $dark-color;
+    //opacity: .5;
+    border-radius: 1000px;
+    overflow: hidden;
+    .user-card {
+        justify-content: flex-end;
+        transition: 1s;
+        color: white;
+        gap: 0px;
+        &__links{
+            color: rgba(white, .8);
+        }
+        &__text {
+            transition: 1s;
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-left: 0px;
+            width: 0px;
+            margin-right: -100px;
+            min-width: 100px;
+            opacity: 0;
+        }
+        &__status{
+            border-width: 0;
+            padding: 2px 4px 3px 4px;
+        }
+        &__admin-panel{
+            color: #2f7eff !important;
+            font-size: 12px;
+        }
+        &__avatar{
+            transition: 2s;
+            //box-shadow: 0 0 20px 20px $dark-color;
+            z-index: 10;
+        }
+
+    }
+    &:hover {
+        .user-card {
+            gap: 12px;
+            &__text{
+                padding-left: 10px;
+                width: 100%;
+                margin-right: 0;
+                opacity: 1;
+            }
+            &__avatar {
+                box-shadow: 0 0 0 0 $dark-color;
+            }
+        }
     }
 }
