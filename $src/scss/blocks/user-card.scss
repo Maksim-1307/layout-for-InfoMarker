@@ -114,18 +114,7 @@
         }
 
     }
-    // &:hover {
-    //     .user-card {
-    //         gap: 12px;
-    //         &__text{
-    //             padding-left: 10px;
-    //             width: 100%;
-    //             margin-right: 0;
-    //             opacity: 1;
-    //         }
-    //         &__avatar {
-    //             box-shadow: 0 0 0 0 $dark-color;
-    //         }
-    //     }
-    // }
+    @media screen and (min-width: 601px) {
+        display: none;
+    }
 }
