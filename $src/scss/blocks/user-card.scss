@@ -78,12 +78,8 @@
 }
 
 .user-card-opened {
-    transition: 1s;
     $padding: 8px;
-    padding: $padding;
-    right: -$padding;
-    top: -$padding;
-    min-width: calc(100% + 2 * $padding);
+    opacity: 0;
     position: absolute;
     background-color: $dark-color;
     //opacity: .5;
@@ -91,22 +87,18 @@
     overflow: hidden;
     .user-card {
         justify-content: flex-end;
-        transition: 1s;
         color: white;
-        gap: 0px;
+        gap: 12px;
         &__links{
             color: rgba(white, .8);
         }
         &__text {
-            transition: 1s;
-            display: flex !important;
+            //display: flex !important;
             flex-direction: column;
             align-items: flex-end;
             padding-left: 0px;
-            width: 0px;
-            margin-right: -100px;
-            min-width: 100px;
             opacity: 0;
+            display: none;
         }
         &__status{
             border-width: 0;
@@ -117,24 +109,23 @@
             font-size: 12px;
         }
         &__avatar{
-            transition: 2s;
             //box-shadow: 0 0 20px 20px $dark-color;
             z-index: 10;
         }
 
     }
-    &:hover {
-        .user-card {
-            gap: 12px;
-            &__text{
-                padding-left: 10px;
-                width: 100%;
-                margin-right: 0;
-                opacity: 1;
-            }
-            &__avatar {
-                box-shadow: 0 0 0 0 $dark-color;
-            }
-        }
-    }
+    // &:hover {
+    //     .user-card {
+    //         gap: 12px;
+    //         &__text{
+    //             padding-left: 10px;
+    //             width: 100%;
+    //             margin-right: 0;
+    //             opacity: 1;
+    //         }
+    //         &__avatar {
+    //             box-shadow: 0 0 0 0 $dark-color;
+    //         }
+    //     }
+    // }
 }
