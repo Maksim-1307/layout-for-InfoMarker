@@ -12,6 +12,9 @@ body{
         font-size: 14px;
         gap: 40px;
     }
+    @media (prefers-color-scheme: dark) {
+        // dark theme
+    }
 }
 
 p{

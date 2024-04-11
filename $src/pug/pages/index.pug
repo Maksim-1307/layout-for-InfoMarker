@@ -13,14 +13,22 @@ html(lang="en")
             include ../blocks/header.pug
             section.upload-section
                 .container
-                    .upload-field
+                    .upload-field.nice-border
+                        img.upload-field__icon(src="img/icons/plus-icon.svg")
+                        p.upload-field__text Переташите в эту область файл для пооверки (doc, docx или pdf до 10 Мб) или нажмите на кнопку
+                        form(action="#" method="post" enctype="multipart/form-data") 
+                            input(type="file" id="upload-file")
+                            label(for="upload-file").btn-1  Загрузить файл
+            section.upload-section
+                .container
+                    .upload-field.nice-border
                         img.upload-field__icon(src="img/icons/plus-icon.svg")
                         p.upload-field__text Переташите в эту область файл для пооверки (doc, docx или pdf до 10 Мб) или нажмите на кнопку
                         form(action="#" method="post" enctype="multipart/form-data") 
                             input(type="file" id="upload-file")
                             label(for="upload-file").btn-1  Загрузить файл
             section.note-section
-                .container
+                .container 
                     .note
                         img(src="img/icons/info-icon.svg").note__icon
                         .note-text Результаты проверки <b>[InfoMarker]*</b> носят строго рекомендательный характер и не могут использоваться в качестве юридического документа

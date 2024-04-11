@@ -1,0 +1,51 @@
+.nice-border{
+    position: relative;
+    border-radius: 33px;
+    &__element{
+        z-index: 1 !important;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: unset;
+        & > div {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+        }
+    }
+    &__edge{
+        width: 36px;
+        height: 36px;
+        background-image: url("img/nice-border/border-edge.png");
+        background-size: cover;
+    }
+    &__bottom{
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+    &__middle{
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    &__horizontal{
+        flex-grow: 1;
+        height: 6.5px;
+        max-width: unset;
+        background: #808080;
+    }
+    &__vertical {
+        //flex-grow: 1;
+        width: 6.5px;
+        background: #808080;
+    }
+    *{
+        z-index: 2;
+    }
+    &__horizontal,  &__vertical, &__edge{
+        @media (prefers-color-scheme: dark) {
+            filter: brightness(1.5);
+        }
+    }
+}
