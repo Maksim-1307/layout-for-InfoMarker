@@ -1,4 +1,12 @@
+$(document).on('click', function (e) {
+    var el = '.user-card-opened';
+    if (container.attr('state') == 'closed') return;
+    if ($(e.target).closest(el).length) return;
+    close_user_card(container);
+});
+
 function open_user_card(container){
+    if (container.attr('state') == 'opened') return;
     const duration = 300;
     text = container.find(".user-card__text");
     if (!text) {
@@ -23,6 +31,7 @@ function open_user_card(container){
 }
 
 function close_user_card(container) {
+    if (container.attr('state') == 'closed') return;
     const duration = 300;
     text = container.find(".user-card__text");
     if (!text) {
