@@ -33,12 +33,14 @@
         flex-grow: 1;
         height: 6.5px;
         max-width: unset;
-        background: #808080;
+        display: flex;
     }
     &__vertical {
         //flex-grow: 1;
         width: 6.5px;
-        background: #808080;
+        //background: #808080;
+        display: flex;
+        flex-direction: column;
     }
     *{
         z-index: 2;
@@ -47,5 +49,17 @@
         @media (prefers-color-scheme: dark) {
             filter: brightness(1.5);
         }
+    }
+    &__h-line{
+        width: 100%;
+        height: 100%;
+        background: url('img/nice-border/border-line-40-h.png');
+        background-size: cover;
+    }
+    &__v-line {
+        width: 100%;
+        height: 100%;
+        background: url('img/nice-border/border-line-40-v.png');
+        background-size: cover;
     }
 }
