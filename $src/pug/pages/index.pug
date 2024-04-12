@@ -17,15 +17,7 @@ html(lang="en")
                         img.upload-field__icon(src="img/icons/plus-icon.svg")
                         p.upload-field__text Переташите в эту область файл для пооверки (doc, docx или pdf до 10 Мб) или нажмите на кнопку
                         form(action="#" method="post" enctype="multipart/form-data") 
-                            input(type="file" id="upload-file")
-                            label(for="upload-file").btn-1  Загрузить файл
-            section.upload-section
-                .container
-                    .upload-field.nice-border
-                        img.upload-field__icon(src="img/icons/plus-icon.svg")
-                        p.upload-field__text Переташите в эту область файл для пооверки (doc, docx или pdf до 10 Мб) или нажмите на кнопку
-                        form(action="#" method="post" enctype="multipart/form-data") 
-                            input(type="file" id="upload-file")
+                            input(type="file" id="upload-file" name="file")
                             label(for="upload-file").btn-1  Загрузить файл
             section.note-section
                 .container 

@@ -1,7 +1,7 @@
 $(document).on('click', function (e) {
-    var el = '.user-card-opened';
+    var container = $('.user-card-opened');
     if (container.attr('state') == 'closed') return;
-    if ($(e.target).closest(el).length) return;
+    if ($(e.target).closest(container).length) return;
     close_user_card(container);
 });
 

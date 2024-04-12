@@ -47,7 +47,7 @@
     }
     &__horizontal,  &__vertical, &__edge{
         @media (prefers-color-scheme: dark) {
-            filter: brightness(1.5);
+            //filter: brightness(1.5);
         }
     }
     &__h-line{
