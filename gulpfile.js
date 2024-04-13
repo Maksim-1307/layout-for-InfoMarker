@@ -16,7 +16,7 @@ const readline = require('readline').createInterface({
 
 //SETTINGS
 
-let currentPage = 'index.pug';
+let currentPage = 'file.pug';
 let toCompress = true;
 
 

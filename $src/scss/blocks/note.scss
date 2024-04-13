@@ -12,4 +12,17 @@
         max-width: 30px;
         max-height: 30px;
     }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    *{
+        color: $second-color;
+    }
+    .btn-1{
+        background-color: $second-color;
+        color: white;
+    }
 }
